@@ -1,12 +1,12 @@
 import cv2 as cv
 import numpy as np
 
-img = np.zeros(shape=(500,500), dtype='uint8')
+img = np.zeros(shape=(256,256), dtype='uint8')
 
-for filas in range(100):
-    for columnas in range(100):
-        img[filas][columnas] = 255
+for filas in range(256):
+    for columnas in range(256):
+        img[filas][columnas] = columnas
 
-cv.imshow("Cuadro Negro", img)
+cv.imshow("Degradado", img)
 k = cv.waitKey(0)
 
