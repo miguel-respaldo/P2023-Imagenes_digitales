@@ -10,3 +10,6 @@ for filas in range(256):
 cv.imshow("Degradado", img)
 k = cv.waitKey(0)
 
+# Guardamos la imagen
+cv.imwrite("degradado.png",img)
+
