@@ -16,3 +16,10 @@ print("shape grises:", img_grises.shape )
 print("ndim color:",  img_color.ndim )
 print("ndim grises:", img_grises.ndim )
 
+# Tipo de dato
+print("dtype color:",  img_color.dtype )
+print("dtype grises:", img_grises.dtype )
+
+# u -> unsigned -> sin signo
+# int -> integer -> entero
+# 8 -> 8 bits -> 1 byte -> 0..255
