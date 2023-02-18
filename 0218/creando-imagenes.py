@@ -1,5 +1,9 @@
 import cv2 as cv
 import numpy as np
 
-img = np.zeros(shape=(100,100), dtype='uint8')
+img = np.zeros(shape=(500,500), dtype='uint8')
+
+cv.imshow("Cuadro Negro", img)
+
+k = cv.waitKey(0)
 
