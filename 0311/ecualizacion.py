@@ -4,7 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Se lee la imagen
-img = cv.imread("../imgs/gruta.jpg")
+#img = cv.imread("../imgs/gruta.jpg")
+img = cv.imread("/tmp/pv.jpg")
 
 # Obtenemos su forma
 fil, col, ch = img.shape
