@@ -23,9 +23,13 @@ Dy = np.array([
 img_gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
 img_dx = cv.filter2D(img_gray, -1, Dx)
+img_dy = cv.filter2D(img_gray, -1, Dy)
+img_Lap = np.absolute(img_dx) + np.absolute(img_dy)
 
 cv.imshow("Original", img_gray)
-cv.imshow("Filtrada", img_dx)
+cv.imshow("Filtrada Dx", img_dx)
+cv.imshow("Filtrada Dy", img_dy)
+cv.imshow("Filtrada Laplaciano", img_Lap)
 
 while True:
     # Leemos del teclado
