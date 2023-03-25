@@ -10,12 +10,15 @@ assert img is not None, "file could not be read, check with os.path.exists()"
 # Obtenemos su forma
 fil, col, ch = img.shape
 
-Dx = np.array([
+escalar = 1
+#escalar = 1/3
+
+Dx = escalar * np.array([
           [-1.,  0.,  1.],
           [-1.,  0.,  1.],
           [-1.,  0.,  1.]])
 
-Dy = np.array([
+Dy = escalar * np.array([
           [-1., -1., -1.],
           [ 0.,  0.,  0.],
           [ 1.,  1.,  1.]])
