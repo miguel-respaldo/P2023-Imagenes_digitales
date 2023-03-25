@@ -11,14 +11,14 @@ assert img is not None, "file could not be read, check with os.path.exists()"
 fil, col, ch = img.shape
 
 Dx = np.array([
-          [-1., -1., -1.],
-          [ 0.,  0.,  0.],
-          [ 1.,  1.,  1.]])
-
-Dy = np.array([
           [-1.,  0.,  1.],
           [-1.,  0.,  1.],
           [-1.,  0.,  1.]])
+
+Dy = np.array([
+          [-1., -1., -1.],
+          [ 0.,  0.,  0.],
+          [ 1.,  1.,  1.]])
 
 img_gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
