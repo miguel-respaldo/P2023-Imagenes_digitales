@@ -16,7 +16,7 @@ if not camara.isOpened():
     print("No se puede abrir la camara")
     exit(1)
 
-key = 48
+newkey = 48
 
 while True:
     # Leemos la imagen de la camara
@@ -29,7 +29,13 @@ while True:
     k = cv.waitKey(1)
     
     if k != -1:
-        key=k
+        newkey=k
+
+    if k == 27 or k == ord('q'): # ESC
+        break
+
+    if newkey >= 48 and newkey <= 53:
+        key = newkey
 
     if key == 48:   # 0
         img = imagen
@@ -43,10 +49,6 @@ while True:
         img = cv.Canny(imagen,100,200)
     elif key == 53: # 5
         img = hisEqulColor(imagen)
-    elif key == 27 or key == ord('q'): # ESC
-        break
-    else:
-        img = imagen
 
 
     cv.imshow("Camara", img)
