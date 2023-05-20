@@ -16,7 +16,7 @@ while True:
         break
 
     # Agregar las siguientes 2 lineas
-    espejo = cv.flip(imagen,0) # 0,1,-1
+    espejo = cv.flip(imagen,1) # 0,1,-1
     cv.imshow("Espejo", espejo)
 
     cv.imshow("Camara", imagen)
