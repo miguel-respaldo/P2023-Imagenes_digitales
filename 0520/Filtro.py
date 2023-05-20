@@ -34,7 +34,7 @@ while True:
     if k == 27 or k == ord('q'): # ESC
         break
 
-    if newkey >= 48 and newkey <= 53:
+    if newkey >= 48 and newkey <= 54:
         key = newkey
 
     if key == 48:   # 0
@@ -49,7 +49,10 @@ while True:
         img = cv.Canny(imagen,100,200)
     elif key == 53: # 5
         img = hisEqulColor(imagen)
-
+    elif key == 54: # 6
+        img = imagen
+        anchoMitad = img.shape[1] // 2
+        img[:,:anchoMitad] = cv.flip(img[:,anchoMitad:],1)
 
     cv.imshow("Camara", img)
     
