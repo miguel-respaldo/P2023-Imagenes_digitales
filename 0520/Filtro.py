@@ -10,7 +10,7 @@ def hisEqulColor(img):
     cv.cvtColor(ycrcb,cv.COLOR_YCR_CB2BGR,img)
     return img
 
-camara = cv.VideoCapture(1)
+camara = cv.VideoCapture(0)
 
 if not camara.isOpened():
     print("No se puede abrir la camara")
